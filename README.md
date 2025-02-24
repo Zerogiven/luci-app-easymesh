@@ -84,12 +84,13 @@ opkg install /path/to/luci-app-easymesh_x86_64.ipk
 1. **Disable/Delete any active wireless networks** in OpenWRT (Go to `Network → Wireless`).  
 2. **Go to `Network → EasyMesh`**  
 3. Select **"Server"** for Mesh Mode.
-   ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/raw/main/images/1740359253028.png)
+   ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359288453.png)
 5. **Enter your WiFi SSID** (This is the main WiFi network all devices will connect to).  
 6. **Select the WiFi Radio** for the **regular AP**. *(Recommended: Use a different radio than the mesh backhaul for best performance.)*  
-7. **Select the Mesh Radio** and enter a separate SSID. *(The app will automatically append `-mesh` to your mesh SSID.)*  
-8. **Enable Password Protection**, enter a Mesh Password, and click **Save & Apply**.  
-9. Click **"Reapply EasyMesh Settings"** to deploy the APs and activate mesh networking.  
+7. **Select the Mesh Radio** and enter a separate SSID. *(The app will automatically append `-mesh` to your mesh SSID.)*
+   ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/raw/main/images/1740359253028.png)
+9. **Enable Password Protection**, enter a Mesh Password, and click **Save & Apply**.  
+10. Click **"Reapply EasyMesh Settings"** to deploy the APs and activate mesh networking.  
 
 🔹 **Verify Setup:**  
 - **Go to `Network → Wireless`** to check that the WiFi networks were added.
