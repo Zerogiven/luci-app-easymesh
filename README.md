@@ -66,14 +66,16 @@ git clone https://github.com/torguardvpn/luci-app-easymesh.git
 # **📥 Installing `luci-app-easymesh` from Release IPK**  
 
 ### **Option 1: Install via OpenWRT UI**  
-1. Download the latest `luci-app-easymesh_x86_64.ipk` from the [Releases](https://github.com/torguardvpn/luci-app-easymesh/releases/download/3.8.17/luci-app-easymesh_3.8.17-r1_all.ipk) section.  
+1. Download the latest `luci-app-easymesh_3.8.17-r1_all.ipk
+` from the [Releases](https://github.com/torguardvpn/luci-app-easymesh/releases/download/3.8.17/luci-app-easymesh_3.8.17-r1_all.ipk) section.  
 2. Navigate to **System → Software** in OpenWRT's LuCI UI.  
-3. Click **Upload Package**, select `luci-app-easymesh_x86_64.ipk`, and install it.  
+3. Click **Upload Package**, select `luci-app-easymesh_3.8.17-r1_all.ipk
+`, and install it.  
 
 ### **Option 2: Install via CLI (SSH/Terminal)**  
 ```bash
 opkg update
-opkg install /path/to/luci-app-easymesh_x86_64.ipk
+opkg install /path/to/luci-app-easymesh_3.8.17-r1_all.ipk
 ```
 
 ---
