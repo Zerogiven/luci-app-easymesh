@@ -132,7 +132,7 @@ opkg install /path/to/luci-app-easymesh_x86_64.ipk
 
 ---
 
-### **Step 5: (Optional) Activate TorGuard WireGuard VPN**
+### **Step 5: (Optional) Activate TorGuard WireGuard VPN on the Mesh Server**
 ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359720850.png)
 1. **Go to `Network → TorGuard WireGuard`.**  
 2. **Enter your WireGuard Username & Password.**  
@@ -145,7 +145,7 @@ opkg install /path/to/luci-app-easymesh_x86_64.ipk
 # **❓ FAQ (Common Questions & Issues)**  
 
 ### **Do I have to use WireGuard with this app?**  
-**No.** You can deploy a standard Mesh WiFi network **without VPN** in minutes.  
+**No.** You can deploy a standard Mesh WiFi network on an OpenWRT router **without a VPN** in minutes.  
 
 ### **Can I run both the main WiFi AP and Mesh AP on the same radio?**  
 You can, **but it’s not recommended**.  
@@ -155,11 +155,11 @@ For best performance, use **separate radios** for each network.
   - **Disable Batman Advanced features:** Disable **bonding** and **fragmentation** to reduce overhead.  
 
 ### **Can I add wired devices or a router that doesn’t support mesh?**  
-Yes! If using a **wired OpenWRT router (x86 device) without mesh support**:  
-- **Go to `Network → Interfaces` and manually select `bat0` as the device.**  
+Yes. If using a **wired OpenWRT router (x86 device) without mesh support**:  
+- **Go to `Network → Interfaces` and manually select `bat0` as the device on the mesh_batman interface.**  
 
 ### **How do I recover a node after enabling Dumb AP mode?**  
-- Connect it to your server **via LAN cable** and access it through the server’s UI.  
+- If you can't access it via Wifi connect it to your server **via LAN cable**, find the node IP under DHCP and connect in a web browser.  
 
 ### **Best way to change Mesh WiFi settings?**  
 1. **Change settings on each node first.**  
