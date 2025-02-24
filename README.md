@@ -92,8 +92,10 @@ opkg install /path/to/luci-app-easymesh_x86_64.ipk
 9. Click **"Reapply EasyMesh Settings"** to deploy the APs and activate mesh networking.  
 
 🔹 **Verify Setup:**  
-- **Go to `Network → Wireless`** to check that the WiFi networks were added.  
-- **Go to `Network → Interfaces`** to confirm that the Batman (`bat0`) device was added.  
+- **Go to `Network → Wireless`** to check that the WiFi networks were added.
+  ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359342226.png)
+- **Go to `Network → Interfaces`** to confirm that the Batman (`bat0`) device was added.
+  ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359385796.png)
 
 ---
 
