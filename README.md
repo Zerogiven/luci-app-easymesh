@@ -95,7 +95,7 @@ opkg install /path/to/luci-app-easymesh_x86_64.ipk
 🔹 **Verify Setup:**  
 - **Go to `Network → Wireless`** to check that the WiFi networks were added.
   ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359342226.png)
-- **Go to `Network → Interfaces`** to confirm that the Batman (`bat0`) device was added.
+- **Go to `Network → Interfaces`** to confirm that the Batman (`bat0`) device and (`mesh_batman`) interface was added.
   ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359385796.png)
 
 ---
