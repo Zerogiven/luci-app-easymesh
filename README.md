@@ -101,13 +101,15 @@ opkg install /path/to/luci-app-easymesh_x86_64.ipk
 
 ### **Step 2: Setup a Mesh Node**
 1. **Go to `Network → EasyMesh` on the second router.**  
-2. **Select "Client" for Mesh Mode.**  
-3. **Enter the same WiFi SSID, Mesh SSID, and Password** as the server.  
-4. **Ensure you select the same WiFi radio type** (AX, AC, b/g/n) for both WiFi SSID and Mesh SSID.  
-5. Click **Save & Apply**, then click **"Reapply EasyMesh Settings"**.  
-6. **Go to `AP Mode` tab** and select a **hostname** (e.g., `node2`, `node3`, etc.).  
-7. **Set to DHCP (recommended for Dumb AP nodes)** or configure a **Static IP** in the same range as your Mesh Server.  
-8. Click **Save & Apply**, then click **"Enable Dumb AP Mode"**.  
+2. **Select "Client" for Mesh Mode.**
+   ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359451089.png)
+4. **Enter the same WiFi SSID, Mesh SSID, and Password** as the server.  
+5. **Ensure you select the same WiFi radio type** (AX, AC, b/g/n) for both WiFi SSID and Mesh SSID.  
+6. Click **Save & Apply**, then click **"Reapply EasyMesh Settings"**.  
+7. **Go to `AP Mode` tab** and select a **hostname** (e.g., `node2`, `node3`, etc.).  
+8. **Set to DHCP (recommended for Dumb AP nodes)** or configure a **Static IP** in the same range as your Mesh Server.
+   ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/7.png)
+10. Click **Save & Apply**, then click **"Enable Dumb AP Mode"**.  
 
 ---
 
@@ -119,15 +121,19 @@ opkg install /path/to/luci-app-easymesh_x86_64.ipk
 
 ### **Step 4: Verify Neighbor Nodes**
 1. **Go to `Network → EasyMesh` on the Mesh Server**  
-   - **Check that nearby nodes are listed under Mesh Status.**  
+   - **Check that nearby nodes are listed under Mesh Status.**
+     ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359534195.png)
 2. **Go to `Network → Wireless`**  
-   - **Verify that Mesh Backhaul Networks are communicating with the server.**  
-3. **Find your Mesh Nodes' IPs in `DHCP Devices` under `Status → Overview`.**  
-4. **Access a node by entering its IP in a browser.**  
+   - **Verify that Mesh Backhaul Networks are communicating with the server.**
+     ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359602760.png)
+3. **Find your Mesh Nodes' IPs in `DHCP Devices` under `Status → Overview`.**
+   ![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359643565.png) 
+5. **Access a node by entering its IP in a browser.**  
 
 ---
 
 ### **Step 5: (Optional) Activate TorGuard WireGuard VPN**
+![EasyMesh Screenshot](https://github.com/torguardvpn/luci-app-easymesh/blob/main/images/1740359720850.png)
 1. **Go to `Network → TorGuard WireGuard`.**  
 2. **Enter your WireGuard Username & Password.**  
 3. **Select your preferred WireGuard server location.**  
