@@ -40,7 +40,7 @@ Mesh WiFi networks are ideal for:
 ### **Step 2: Add the EasyMesh App to OpenWRT Package Sources**  
 ```bash
 cd package
-git clone https://github.com/YOUR_GITHUB_USERNAME/luci-app-easymesh.git
+git clone https://github.com/torguardvpn/luci-app-easymesh.git
 ```
 
 ### **Step 3: Compile the Package**  
@@ -66,7 +66,7 @@ git clone https://github.com/YOUR_GITHUB_USERNAME/luci-app-easymesh.git
 # **📥 Installing `luci-app-easymesh` from Release IPK**  
 
 ### **Option 1: Install via OpenWRT UI**  
-1. Download the latest `luci-app-easymesh_x86_64.ipk` from the [Releases](https://github.com/YOUR_GITHUB_USERNAME/luci-app-easymesh/releases) section.  
+1. Download the latest `luci-app-easymesh_x86_64.ipk` from the [Releases](https://github.com/torguardvpn/luci-app-easymesh/releases/download/3.8.17/luci-app-easymesh_3.8.17-r1_all.ipk) section.  
 2. Navigate to **System → Software** in OpenWRT's LuCI UI.  
 3. Click **Upload Package**, select `luci-app-easymesh_x86_64.ipk`, and install it.  
 
