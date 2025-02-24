@@ -157,10 +157,10 @@ For best performance, use **separate radios** for each network.
 
 ### **Can I add wired devices or a router that doesn’t support mesh?**  
 Yes. If using a **wired OpenWRT router (x86 device) without mesh support**:  
-- **Go to `Network → Interfaces` and manually select `bat0` as the device on the mesh_batman interface.**  
+- **Go to `Network → Interfaces` and manually select `bat0` as the device on the `mesh_batman` interface.**  
 
 ### **How do I recover a node after enabling Dumb AP mode?**  
-- If you can't access it via Wifi connect it to your server **via LAN cable**, find the node IP under DHCP and connect in a web browser.  
+- If you can't access it via Wifi connect it to your server **via LAN cable**, then find the node IP under DHCP and connect in a web browser.  
 
 ### **Best way to change Mesh WiFi settings?**  
 1. **Change settings on each node first.**  
