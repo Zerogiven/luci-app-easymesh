@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 # Dumb AP Mode Block
 set_apmode() {
@@ -23,7 +23,7 @@ set_apmode() {
         fi
     done
 
-    if [ "$(uci -q get easymesh.config.ipmode)" == "static" ]; then
+    if [ "$(uci -q get easymesh.config.ipmode)" = "static" ]; then
         # Set static IP
         uci set network.lan.proto='static'
         uci set network.lan.ipaddr=$(uci -q get easymesh.config.ipaddr)
@@ -123,7 +123,7 @@ set_apmode() {
 
 disable_apmode() {
     # Config Count Must Match 5
-    local CONFIG_COUNT=0
+    CONFIG_COUNT=0
 
     # Check our configs exist, then restore them
     [ -f /etc/config/wireless.meshbak ] && {
@@ -188,7 +188,7 @@ clear_by_mesh_id() {
     # Check if MESH_NAME is not empty
     if [ -z "$MESH_ID_TO_CLEAR" ]; then
         echo "No mesh_id passed to remove from wireless."
-        return;
+        return
     fi
 
     # Get the output from uci show wireless
@@ -256,7 +256,7 @@ create_batman_network() {
 
     # Set the bat0 role
     BAT_ROLE=$(uci -q get easymesh.config.role)
-    if [ "${BAT_ROLE}" == "server" ]; then
+    if [ "${BAT_ROLE}" = "server" ]; then
         uci set network.bat0.gw_mode='server'
         echo "Setting bat0 as a server."
 
@@ -277,7 +277,7 @@ create_batman_network() {
         uci set firewall.@zone[1].network="wan mesh_batman"
         uci commit firewall
 
-    elif [ "${BAT_ROLE}" == "client" ] || [ "${BAT_ROLE}" == "off" ]; then
+    elif [ "${BAT_ROLE}" = "client" ] || [ "${BAT_ROLE}" = "off" ]; then
         uci set network.bat0.gw_mode='off'
         echo "Disabling bat0 gateway mode."
 
@@ -405,7 +405,7 @@ setup_mesh_radio() {
         uci set wireless.wifi_ap_$WIFI_RADIO.mobility_domain=$MOBILITY_DOMAIN
         uci set wireless.wifi_ap_$WIFI_RADIO.ft_over_ds='0'
         uci set wireless.wifi_ap_$WIFI_RADIO.ft_psk_generate_local='0'
-        uci set wireless.wifi_ap_$WIFI_RADIO.disabled=0  # ?? Force-enable AP
+        uci set wireless.wifi_ap_$WIFI_RADIO.disabled=0
 
         # Apply encryption settings for regular WiFi
         if [ "$ENCRYPTION_ENABLED" = 1 ] && [ ! -z "$NETWORK_KEY" ]; then
@@ -416,7 +416,7 @@ setup_mesh_radio() {
             [ -z "$NETWORK_KEY" ] && echo "Encryption key is empty, so encryption was disabled."
         fi
 
-        # ?? Apply WiFi settings immediately
+        # Apply WiFi settings immediately
         uci commit wireless
         wifi reload
         sleep 2
@@ -436,7 +436,7 @@ setup_mesh_radio() {
         uci set wireless.mesh_$AP_RADIO.mesh_rssi_threshold='0'
         uci set wireless.mesh_$AP_RADIO.mesh_ttl='1'
         uci set wireless.mesh_$AP_RADIO.mcast_rate='24000'
-        uci set wireless.mesh_$AP_RADIO.disabled='0'  # ?? Force-enable mesh AP
+        uci set wireless.mesh_$AP_RADIO.disabled='0'
 
         # Apply encryption settings for mesh
         if [ "$ENCRYPTION_ENABLED" = 1 ] && [ ! -z "$NETWORK_KEY" ]; then
@@ -446,7 +446,7 @@ setup_mesh_radio() {
             uci set wireless.mesh_$AP_RADIO.encryption='none'
         fi
 
-        # ?? Apply WiFi settings after Mesh AP is set
+        # Apply WiFi settings after Mesh AP is set
         uci commit wireless
         wifi reload
         sleep 2
